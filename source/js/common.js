@@ -23,4 +23,26 @@ if (select.length) {
 	})
 }
 
+// range slider
+let slider = document.getElementById("rangeSlider");
+let output = document.getElementById("value");
+
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+let start_value = slider.getAttribute("value");
+
+let x = start_value;
+let color = 'linear-gradient(100deg, rgb(197, 0, 255)' + x + '% , rgb(248, 227, 255)' + x + '%)';
+slider.style.background = color;
+
+slider.addEventListener("mousemove", function() {
+    x = slider.value;
+    color = 'linear-gradient(100deg, rgb(197, 0, 255)' + x + '% , rgb(248, 227, 255)' + x + '%)';
+    slider.style.background = color;
+});
+
 

@@ -1,22 +1,23 @@
 {
-  "name": "olimpic",
+  "name": "JST_Shop",
   "version": "1.0.0",
   "private": true,
-  "description": "olimpic project",
+  "description": "JST_Shop project",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "gulp-csso": "4.0.1",
+    "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "7.1.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.0",
     "gulp-posthtml": "3.0.5",
+    "gulp-purgecss": "4.0.3",
     "gulp-sass": "4.1.0",
     "gulp-svgstore": "7.0.1",
     "gulp-uglify-es": "2.0.0",
     "gulp-webp": "4.0.1",
-    "mixitup": "^3.3.1",
     "node-sass": "5.0.0",
-    "postcss": "^8.2.15",
+    "postcss": "^8.3.0",
     "posthtml-include": "1.7.0",
     "stylelint-config-htmlacademy": "0.1.4"
   },
@@ -58,7 +59,6 @@
     "gulp-sourcemaps": "3.0.0",
     "lightbox2": "^2.11.3",
     "merge": "2.1.1",
-    "stylelint": "13.12.0",
-    "urix": "^0.1.0"
+    "stylelint": "13.12.0"
   }
 }
