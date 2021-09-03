@@ -23,7 +23,12 @@ if (select.length) {
 	})
 }
 
+
+
+
 // range slider
+const getPercentageInRange = (value, min, max) => ((value - min) * 100) / (max - min)
+
 let slider = document.getElementById("rangeSlider");
 let output = document.getElementById("value");
 
@@ -33,16 +38,22 @@ slider.oninput = function() {
   output.innerHTML = this.value;
 }
 
-let start_value = slider.getAttribute("value");
+let startValue = slider.getAttribute("value");
 
-let x = start_value;
+let minValue = slider.getAttribute("min");
+let maxValue = slider.getAttribute("max");
+let x = getPercentageInRange(startValue, minValue, maxValue);
+
+
 let color = 'linear-gradient(90deg, rgb(197, 0, 255)' + x + '%; , rgb(248, 227, 255)' + x + '%)';
 slider.style.background = color;
 
 slider.addEventListener("mousemove", function() {
-    x = slider.value;
+  x = getPercentageInRange(slider.value, minValue, maxValue)
     color = 'linear-gradient(90deg, rgb(197, 0, 255)' + x + '% , rgb(248, 227, 255)' + x + '%)';
     slider.style.background = color;
+
 });
+
 
 
