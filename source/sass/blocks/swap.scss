@@ -16,6 +16,13 @@
   height: 112px;
 }
 
+.swap-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
 .swap-box__wrapper {
   position: relative;
 
@@ -254,6 +261,10 @@
   margin-right: 6px;
 }
 
+.coin-name {
+  width: 55px;
+}
+
 .swap-max {
   width: 49px;
   height: 21px;
@@ -264,3 +275,4 @@
   color: #ffffff;
   margin: 0 20px;
 }
+

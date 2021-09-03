@@ -36,12 +36,12 @@ slider.oninput = function() {
 let start_value = slider.getAttribute("value");
 
 let x = start_value;
-let color = 'linear-gradient(100deg, rgb(197, 0, 255)' + x + '% , rgb(248, 227, 255)' + x + '%)';
+let color = 'linear-gradient(90deg, rgb(197, 0, 255)' + x + '% , rgb(248, 227, 255)' + x + '%)';
 slider.style.background = color;
 
 slider.addEventListener("mousemove", function() {
     x = slider.value;
-    color = 'linear-gradient(100deg, rgb(197, 0, 255)' + x + '% , rgb(248, 227, 255)' + x + '%)';
+    color = 'linear-gradient(90deg, rgb(197, 0, 255)' + x + '% , rgb(248, 227, 255)' + x + '%)';
     slider.style.background = color;
 });
 
