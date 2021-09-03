@@ -1204,44 +1204,57 @@
                     <span class="balance-count"></span>123
                   </div>
                 </div>
-                <div class="swap-send">
-                  <div class="select select__coin">
-                    <div class="select__header">
-                      <span class="select__current coin-name">ETH</span>
-                    </div>
-                    <input class="receive-count" type="text" placeholder="1010101010.2303">
-                    <button class="swap-max" type="button">MAX</button>
-                    <div class="select__icon">
-                      <svg  width='15' height='15'>
-                      <use href='img/sprite/sprite.svg#arrow'></use>
-                      </svg>
+
+                <div class="dropdown">
+                  <div class="swap-send">
+                    <div class="dropdown__button">
+                      <picture>
+                      <source type='image/webp' srcset='img/eth.webp'>
+                      <img class='coin-img' width='100' height='100' src='img/eth.png' alt=''>
+                      </picture>
+                      ETH
+                      <input class="receive-count" type="text" placeholder="1010101010.2303">
+                      <button class="swap-max" type="submit">MAX</button>
                     </div>
 
-                    <div class="select__body">
-                      <ul class="select__wrapper">
-                        <li class="select__item item-coin item-coin__active" data-choice="choosen">
-                          <picture>
-                          <source type='image/webp' srcset='img/eth.webp'>
-                          <img class='' width='100' height='100' src='img/eth.png' alt=''>
-                          </picture>
-                          <span class="coin-name coin-eth">ETH</span>
-                          <input class="receive-count" type="text" placeholder="1010101010.2303">
-                        </li>
-                        <li class="select__item item-icon" data-choice="choosen">
-                          <span class="coin-name">DAI</span>
-                          <input class="receive-count" type="text" placeholder="1010101010.2303">
-                        </li>
-                        <li class="select__item item-icon" data-choice="choosen">
-                          <span class="coin-name">USDT</ы>
-                        </li>
-                        <li class="select__item item-icon" data-choice="choosen">
-                          <span class="coin-name">USDC</span>
-                          <input class="receive-count" type="text" placeholder="1010101010.2303">
-                        </li>
-                      </ul>
-                    </div>
                   </div>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__list-item" data-value="eth">
+                      <picture>
+                        <source type='image/webp' srcset='img/eth.webp'>
+                        <img class='coin-img' width='100' height='100' src='img/eth.png' alt=''>
+                      </picture>
+                      ETH
+                      <input class="receive-count" type="text" placeholder="1010101010.2303">
+                    </li>
+                    <li class="dropdown__list-item" data-value="dai">
+                      <picture>
+                        <source type='image/webp' srcset='img/dai.webp'>
+                        <img class='coin-img' width='100' height='100' src='img/dai.png' alt=''>
+                        </picture>
+                        DAI
+                        <input class="receive-count" type="text" placeholder="1010101010.2303">
+                    </li>
+                    <li class="dropdown__list-item" data-value="usdt">
+                      <picture>
+                        <source type='image/webp' srcset='img/usdt.webp'>
+                        <img class='coin-img' width='100' height='100' src='img/usdt.png' alt=''>
+                        </picture>
+                        USDT
+                        <input class="receive-count" type="text" placeholder="">
+                    </li>
+                    <li class="dropdown__list-item" data-value="usdt">
+                      <picture>
+                        <source type='image/webp' srcset='img/usdc.webp'>
+                        <img class='coin-img' width='100' height='100' src='img/usdc.png' alt=''>
+                        </picture>
+                        USDC
+                        <input class="receive-count" type="text" placeholder="1010101010.2303">
+                    </li>
+                  </ul>
+                  <input type="text" name="select-coin" value="" class="dropdown__input-hidden">
                 </div>
+
               </div>
 
               <div class="swap-block__to">

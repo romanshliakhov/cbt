@@ -1,31 +1,3 @@
-//  custom-select
-// переменная не переназначается, поэтому используем const
-// используем querySelectorAll, чтобы собрать массив со всеми сущностями .select
-const select = document.querySelectorAll('.select');
-
-// если массив не пустой, пробегаемся в цикле по каждой найденой сущности
-if (select.length) {
-	select.forEach(item => {
-		// достаем из текущей сущности .select__current
-		const selectCurrent = item.querySelector('.select__current');
-
-		item.addEventListener('click', event => {
-			const el = event.target.dataset.choice;
-			const text = event.target.innerText;
-
-			// Проверяем является ли это choosen и не выбрано ли его значение уже
-			if (el === 'choosen' && selectCurrent.innerText !== text) {
-				selectCurrent.innerText = text;
-			}
-
-			item.classList.toggle('is-active');
-		});
-	})
-}
-
-
-
-
 // range slider
 const getPercentageInRange = (value, min, max) => ((value - min) * 100) / (max - min)
 
@@ -52,8 +24,40 @@ slider.addEventListener("mousemove", function() {
   x = getPercentageInRange(slider.value, minValue, maxValue)
     color = 'linear-gradient(90deg, rgb(197, 0, 255)' + x + '% , rgb(248, 227, 255)' + x + '%)';
     slider.style.background = color;
-
 });
 
+// dropdown
+// клик по кнопке
+document.querySelector('.dropdown__button').addEventListener('click', function () {
+  document.querySelector('.dropdown__list').classList.toggle('dropdown__list--visible');
+  this.classList.add('dropdown__button--active')
+});
 
+// Выбор элемента из списка. Запомнить выбранное значение. Закрыть дропдаун
+document.querySelectorAll('.dropdown__list-item').forEach(function (listItem) {
+  listItem.addEventListener('click', function (e) {
+    e.stopPropagation();
+    document.querySelector('.dropdown__button').innerHTML = this.innerHTML;
+    document.querySelector('.dropdown__button').focus();
+    document.querySelector('.dropdown__button').add
+    document.querySelector('.dropdown__input-hidden').value = this.dataset.value;
+    document.querySelector('.dropdown__list').classList.remove('dropdown__list--visible');
+  });
+});
+
+// Клик снаружи. Закрыть дропдаун
+document.addEventListener('click', function (e) {
+  if (e.target !== document.querySelector('.dropdown__button')) {
+    document.querySelector('.dropdown__button').classList.remove('dropdown__button--active');
+    document.querySelector('.dropdown__list').classList.remove('dropdown__list--visible');
+  };
+});
+
+// Закрыть клавишей ESC и TAB
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Tab' || e.key === 'Escape' ) {
+    document.querySelector('.dropdown__button').classList.remove('dropdown__button--active');
+    document.querySelector('.dropdown__list').classList.remove('dropdown__list--visible');
+  };
+});
 
