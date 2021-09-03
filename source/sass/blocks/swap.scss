@@ -1,0 +1,261 @@
+.swap {
+  height: 835px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.logo {
+  width: 425px;
+  height: 112px;
+}
+
+.swap-box__wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 606px;
+    height: 439px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #df96f9;
+    box-shadow: 0 0 21px rgba(0, 0, 0, 0.11);
+    border-radius: 15px;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 679px;
+    height: 372px;
+    background-color: #df96f9;
+    border-radius: 15px;
+    z-index: 1;
+  }
+}
+
+.swap-box {
+  margin: 40px 0 20px;
+  width: 522px;
+  height: 553px;
+  background: #ffffff;
+  box-shadow: 0 0 19px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+  padding: 32px 40px 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.swap-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.swap-cbt {
+  display: flex;
+  height: 100%;
+}
+
+.swap-cbt__icon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 11px rgba(0, 0, 0, 0.21));
+}
+
+.swap-cbt__name {
+  margin-left: 14px;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.swap-head__balance {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.swap-slider__descr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swap-slider__container .slider {
+  appearance: none;
+  margin-top: 24px;
+  width: 100%;
+  height: 6px;
+  background: #f8e3ff;
+  border: 0.5px solid #c500ff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 28px;
+}
+
+.swap-slider__container .slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #c500ff;
+  box-shadow: -1px 3px 5px rgba(0, 0, 0, 0.58);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.swap-divider {
+  width: 100%;
+}
+
+.swap-divider__counts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swap-divider__line {
+  width: 100%;
+  height: 6px;
+  margin-top: 11px;
+  background: linear-gradient(90deg, #ec00ff 0%, #8f00fd 50.34%, #f800ff 100%);
+  border-radius: 28px;
+}
+
+.swap-block__to {
+  margin-top: 11px;
+}
+
+.swap-block__head {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.swap-block__arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swap-receive,
+.swap-send {
+  height: 50px;
+  width: 100%;
+  background-color: #f8e3ff;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.swap-send {
+  margin-top: 17px;
+}
+
+.swap-receive {
+  margin-top: 11px;
+  padding: 0 23px;
+}
+
+.receive-item {
+  display: flex;
+  align-items: center;
+
+  .swap-cbt__icon {
+    width: 27px;
+    height: 27px;
+    margin-right: 6px;
+  }
+}
+
+.receive-count {
+  margin-left: 30px;
+  color: #c500ff;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  width: 170px;
+  margin-bottom: 2px;
+}
+
+.receive-count::placeholder {
+  color: #c500ff;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+
+.swap-bottom {
+  text-align: center;
+}
+
+.swap-info__price {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.swap-info__descr {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 300;
+}
+
+.swap-btn {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(90deg, #3840ff 0%, #de00ff 100%);
+  border-radius: 3px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 456px;
+  height: 53px;
+  background: #ffffff;
+  border-radius: 55px;
+
+  a + a {
+    margin-left: 10px;
+  }
+}
+
+.socials-apps {
+  margin-left: 10px;
+}
+
+.coin-img {
+  width: 27px;
+  height: 27px;
+  margin-right: 6px;
+}
+
+.swap-max {
+  width: 49px;
+  height: 21px;
+  background-color: #c500ff;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  margin: 0 20px;
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="Description" content=" Virna case test " />
+  <title></title>
+  <script src="js/picturefill.min.js" async="async"></script>
+  <link rel="preload" href="fonts/SofiaProBold.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/SofiaProRegular.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/SofiaProLight.woff2"2 as="font" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body class="body-index">
+
+  <main class="main">
+    <section class="swap">
+      <a href="#" class="logo">
+        <picture>
+          <source type='image/webp' srcset='img/logo.webp'>
+          <img class='logo-img' width='100' height='100' src='img/logo.png' alt='Logo'>
+          </picture>
+      </a>
+
+      <div class="swap-box__wrapper">
+        <div class="swap-box">
+          <div class="swap-head">
+            <div class="swap-cbt">
+              <picture>
+                <source type='image/webp' srcset='img/cbt.webp'>
+                <img class='swap-cbt__icon' width='40px' height='40px' src='img/CBT.png' alt=''>
+              </picture>
+              <div class="swap-cbt__name">CBT</div>
+            </div>
+            <div class="swap-head__balance">balance remain for sale: 2 000 000 CBT</div>
+          </div>
+
+          <div class="swap-slider">
+            <div class="swap-slider__descr">
+              <div class="swap-slider__period">Vesting period: 4W</div>
+              <div class="swap-slider__weight">Weight: 1.05</div>
+            </div>
+            <div class="swap-slider__container">
+              <input class="slider" type="range" min="4" max="48" value="50">
+            </div>
+          </div>
+
+          <div class="swap-divider">
+            <div class="swap-divider__counts">
+              <div class="swap-divider__count">4</div>
+              <div class="swap-divider__count">48</div>
+            </div>
+            <div class="swap-divider__line"></div>
+          </div>
+
+          <div class="swap-block">
+            <div class="swap-block__from">
+              <div class="swap-block__head">
+                <div class="swap-block__name">From</div>
+                <div class="swap-block__balance">Balance:
+                  <span class="balance-count"></span>123
+                </div>
+              </div>
+              <div class="swap-send">
+                <div class="select select__coin">
+                  <div class="select__header">
+                    <span class="select__current">
+                      <picture>
+                        <source type='image/webp' srcset='img/eth.webp'>
+                        <img class='coin-img' width='100' height='100' src='img/eth.png' alt='Ethereum'>
+                      </picture>
+                      <span class="select__current current-coin">ETH</span>
+                      <input class="receive-count" type="text" placeholder="1010101010.2303">
+                    </span>
+                  </div>
+
+                  <button class="swap-max" type="button">MAX</button>
+                  <div class="select__icon">
+                    <svg  width='15' height='15'>
+                    <use href='img/sprite/sprite.svg#arrow'></use>
+                    </svg>
+                  </div>
+
+                  <div class="select__body">
+                    <div class="select__item item-coin item-coin__active " data-choice="choosen">
+                      <picture>
+                        <source type='image/webp' srcset='img/eth.webp'>
+                        <img class='coin-img' width='100' height='100' src='img/eth.png' alt='Ethereum'>
+                      </picture>
+                      <div class="coin-name">ETH</div>
+                      <label>
+                        <input class="receive-count" type="text" placeholder="1010101010.2303">
+                      </label>
+                    </div>
+                    <div class="select__item item-icon" data-choice="choosen">
+                      <picture>
+                        <source type='image/webp' srcset='img/dai.webp'>
+                        <img class='coin-img' width='100' height='100' src='img/dai.png' alt='Ethereum'>
+                      </picture>
+                      <div class="coin-name">DAI</div>
+                      <label>
+                        <input class="receive-count" type="text" placeholder="1010101010.2303">
+                      </label>
+                    </div>
+                    <div class="select__item item-icon" data-choice="choosen">
+                      <picture>
+                        <source type='image/webp' srcset='img/usdt.webp'>
+                        <img class='coin-img' width='100' height='100' src='img/usdt.png' alt='Ethereum'>
+                      </picture>
+                      <div class="coin-name">USDT</div>
+                    </div>
+                    <div class="select__item item-icon" data-choice="choosen">
+                      <picture>
+                        <source type='image/webp' srcset='img/usdc.webp'>
+                        <img class='coin-img' width='100' height='100' src='img/usdc.png' alt='Ethereum'>
+                      </picture>
+                      <div class="coin-name">USDC</div>
+                      <label>
+                        <input class="receive-count" type="text" placeholder="1010101010.2303">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swap-block__to">
+              <div class="swap-block__head">
+                <div class="swap-block__name">To</div>
+                <svg class="swap-block__arrow" width='13' height='23'>
+                <use href='img/sprite/sprite.svg#arrow-down'></use>
+                </svg>
+              </div>
+              <div class="swap-receive">
+                <div class="receive-item">
+                  <picture>
+                    <source type='image/webp' srcset='img/cbt.webp'>
+                    <img class='swap-cbt__icon' width='27px' height='27px' src='img/CBT.png' alt=''>
+                  </picture>
+                  <div class="receive-item_name">CBT</div>
+                </div>
+                <input class="receive-count" type="text" placeholder="1010101010.2303">
+              </div>
+            </div>
+          </div>
+
+          <div class="swap-bottom">
+            <div class="swap-info__price">Estimated price: $0.03 per CBT</div>
+            <div class="swap-info__descr">Increasing vesting period lowers the token purchase price</div>
+            <button class="swap-btn" type="button">buy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="socials">
+        <div class="socials-icons">
+          <a href="#" class="socials-link">
+            <svg  width='35' height='35'>
+            <use href='img/sprite/sprite.svg#telegram'></use>
+            </svg>
+          </a>
+          <a href="#" class="socials-link">
+            <svg  width='35' height='35'>
+            <use href='img/sprite/sprite.svg#twitter'></use>
+            </svg>
+          </a>
+          <a href="#" class="socials-link">
+            <picture>
+            <source type='image/webp' srcset='img/discord.webp'>
+            <img class='discord' width='100' height='100' src='img/discord' alt=''>
+            </picture>
+            </a>
+          <a href="#" class="socials-link">
+          <picture>
+          <source type='image/webp' srcset='img/discord.webp'>
+          <img class='discord' width='100' height='100' src='img/discord' alt=''>
+          </picture>
+          </a>
+        </div>
+        <div class="socials-apps">Social media</div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/common.min.js"></script>
+</body>
+
+</html>

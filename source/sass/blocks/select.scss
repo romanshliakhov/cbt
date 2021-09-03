@@ -1,0 +1,82 @@
+.select {
+  position: relative;
+  width: 175px;
+  height: 100%;
+}
+
+.select.is-active .select__body {
+  display: block;
+}
+
+.select__coin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.select__header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 293px;
+  padding-left: 23px;
+}
+
+.select__current {
+  position: relative;
+  transition: all 0.3s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.select__icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 36px;
+    left: 0;
+    top: 50%;
+    border-left: 1px solid rgba(197, 0, 255, 0.3);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.select__body {
+  border-top: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 100%;
+  height: auto;
+  background: #ffffff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.select__item {
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s;
+  padding-left: 23px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fcf2ff;
+    transition: 0.2s all;
+  }
+}
