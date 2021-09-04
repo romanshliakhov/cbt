@@ -19,17 +19,17 @@
   &--active {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
   }
+}
 
-  .receive-count {
-    margin-left: 10px;
-  }
+.dropdown__button.dropdown__button--active::after {
+  transform: rotate(180deg) translateY(50%);
 }
 
 .dropdown__button::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 36px;
+  right: 30px;
   transform: translateY(-50%);
   width: 0;
   height: 0;
@@ -43,7 +43,7 @@
   content: "";
   position: absolute;
   height: 36px;
-  right: 80px;
+  right: 70px;
   top: 50%;
   border-left: 1px solid rgba(197, 0, 255, 0.3);
   transform: translate(-50%, -50%);
