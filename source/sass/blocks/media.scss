@@ -32,6 +32,7 @@
     padding: 10px 5px;
     width: 100%;
     border-radius: 0;
+    height: 480px;
   }
 
   .socials {
@@ -69,16 +70,22 @@
     right: 40px;
   }
 
-  .swap__max {
-    display: none;
-  }
-
   .receive__count {
     margin-bottom: 4px;
   }
 
   .dropdown__list {
     width: 100%;
+  }
+
+  .swap__cbt-name {
+    margin-left: 15px;
+    font-size: 30px;
+  }
+
+  .swap__tokenomics {
+    margin-top: -12px;
+    font-size: 14px;
   }
 }
 
