@@ -5,11 +5,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="Description" content=" Virna case test " />
-  <title></title>
+  <title>CryptoBattles</title>
   <script src="js/picturefill.min.js" async="async"></script>
   <link rel="preload" href="fonts/SofiaProBold.woff2" as="font" crossorigin="anonymous" />
   <link rel="preload" href="fonts/SofiaProRegular.woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/SofiaProLight.woff2"2 as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/SofiaProLight.woff2" as="font" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -39,7 +39,7 @@
                 <div class="swap__cbt-info">
                   <picture>
                     <source type='image/webp' srcset='img/cbt.webp'>
-                    <img class='swap__cbt-icon' width='40px' height='40px' src='img/CBT.png' alt=''>
+                    <img class='swap__cbt-icon' width='40' height='40' src='img/CBT.png' alt=''>
                   </picture>
                   <div class="swap__cbt-name">CBT</div>
                 </div>
@@ -71,7 +71,7 @@
                 <div class="swap__block-head">
                   <div class="swap__block-name">From</div>
                   <div class="swap__block-balance">Balance:
-                    <span class="balance__count"></span>123
+                    <span class="balance__count-current">123</span>
                   </div>
                 </div>
 
@@ -81,7 +81,7 @@
                       <div class="coin">
                         <picture>
                           <source type='image/webp' srcset='img/eth.webp'>
-                          <img class='coin__img' width='27px' height='27px' src='img/eth.png' alt=''>
+                          <img class='coin__img' width='27' height='27' src='img/eth.png' alt=''>
                         </picture>
                         <div class="coin__name">ETH</div>
                       </div>
@@ -94,10 +94,11 @@
                       <div class="coin">
                         <picture>
                           <source type='image/webp' srcset='img/eth.webp'>
-                          <img class='coin__img' width='27px' height='27px' src='img/eth.png' alt='ETH'>
+                          <img class='coin__img' width='27' height='27' src='img/eth.png' alt='ETH'>
                         </picture>
                         <div class="coin__name">ETH</div>
                       </div>
+                      <span class="balance__count balance__count-current">1010101010.2303</span>
                       <input class="receive__count" type="text" placeholder="1010101010.2303">
                       <button class="swap__max" type="submit">MAX</button>
                     </li>
@@ -105,10 +106,11 @@
                       <div class="coin">
                         <picture>
                           <source type='image/webp' srcset='img/dai.webp'>
-                          <img class='coin__img' width='27px' height='27px' src='img/dai.png' alt='DAI'>
+                          <img class='coin__img' width='27' height='27' src='img/dai.png' alt='DAI'>
                         </picture>
                         <div class="coin__name">DAI</div>
                       </div>
+                      <span class="balance__count balance__count-current">1010101010.2303</span>
                       <input class="receive__count" type="text" placeholder="1010101010.2303">
                       <button class="swap__max" type="submit">MAX</button>
                     </li>
@@ -116,21 +118,37 @@
                       <div class="coin">
                         <picture>
                           <source type='image/webp' srcset='img/usdt.webp'>
-                          <img class='coin__img' width='27px' height='27px' src='img/usdt.png' alt='USDT'>
+                          <img class='coin__img' width='27' height='27' src='img/usdt.png' alt='USDT'>
                         </picture>
                         <div class="coin__name">USDT</div>
                       </div>
-                      <input class="receive__count" type="text" placeholder="">
+                      <span class="balance__count">1010101010.2303</span>
+                      <input class="receive__count" type="text" placeholder="1010101010.2303">
                       <button class="swap__max" type="submit">MAX</button>
                     </li>
                     <li class="dropdown__list-item" data-value="usdt">
                       <div class="coin">
                         <picture>
                           <source type='image/webp' srcset='img/usdc.webp'>
-                          <img class='coin__img' width='27px' height='27px' src='img/usdc.png' alt='USDT'>
+                          <img class='coin__img' width='27' height='27' src='img/usdc.png' alt='USDT'>
                         </picture>
+                        <span class="balance__count"></span>
                         <div class="coin__name">USDC</div>
                       </div>
+                      <span class="balance__count">1010101010.2303</span>
+                      <input class="receive__count" type="text" placeholder="1010101010.2303">
+                      <button class="swap__max" type="submit">MAX</button>
+                    </li>
+                    <li class="dropdown__list-item" data-value="usdt">
+                      <div class="coin">
+                        <picture>
+                          <source type='image/webp' srcset='img/usdc.webp'>
+                          <img class='coin__img' width='27' height='27' src='img/usdc.png' alt='USDT'>
+                        </picture>
+                        <span class="balance__count"></span>
+                        <div class="coin__name">USDC</div>
+                      </div>
+                      <span class="balance__count">1010101010.2303</span>
                       <input class="receive__count" type="text" placeholder="1010101010.2303">
                       <button class="swap__max" type="submit">MAX</button>
                     </li>
@@ -152,7 +170,7 @@
                     <div class="coin">
                       <picture>
                         <source type='image/webp' srcset='img/cbt.webp'>
-                        <img class='coin__img' width='27px' height='27px' src='img/CBT.png' alt=''>
+                        <img class='coin__img' width='27' height='27' src='img/CBT.png' alt=''>
                       </picture>
                       <div class="coin__name">CBT</div>
                     </div>
@@ -181,24 +199,28 @@
       <div class="socials">
         <div class="socials__icons">
           <a href="#" class="socials__link">
-            <svg  width='35' height='35'>
-            <use href='img/sprite/sprite.svg#telegram'></use>
-            </svg>
+            <picture>
+            <source type='image/webp' srcset='img/telegram.webp'>
+            <img class='socials__icon' width='100' height='100' src='img/telegram.png' alt='telegram'>
+            </picture>
           </a>
           <a href="#" class="socials__link">
-            <svg  width='35' height='35'>
-            <use href='img/sprite/sprite.svg#twitter'></use>
-            </svg>
+            <picture>
+              <source type='image/webp' srcset='img/twitter.webp'>
+              <img class='socials__icon' width='100' height='100' src='img/twitter.png' alt='twitter'>
+            </picture>
           </a>
           <a href="#" class="socials__link">
-            <svg  width='35' height='35'>
-            <use href='img/sprite/sprite.svg#discord'></use>
-            </svg>
+            <picture>
+              <source type='image/webp' srcset='img/discord.webp'>
+              <img class='socials__icon' width='100' height='100' src='img/discord.png' alt='discord'>
+            </picture>
           </a>
           <a href="#" class="socials__link">
-            <svg  width='35' height='35'>
-            <use href='img/sprite/sprite.svg#media'></use>
-            </svg>
+            <picture>
+              <source type='image/webp' srcset='img/media.webp'>
+              <img class='socials__icon' width='100' height='100' src='img/media.png' alt='media'>
+            </picture>
           </a>
         </div>
         <div class="socials__apps">Social media</div>

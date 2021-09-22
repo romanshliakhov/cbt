@@ -252,6 +252,11 @@
   margin-left: 10px;
 }
 
+.socials__icon {
+  width: 35px;
+  height: 35px;
+}
+
 .coin {
   display: flex;
   align-items: center;
@@ -286,5 +291,8 @@
   z-index: 10;
 }
 
-
+.balance__count {
+  max-width: 170px;
+  outline: none;
+}
 
